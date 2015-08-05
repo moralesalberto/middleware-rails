@@ -38,6 +38,13 @@ class ConvertLocale
 end
 ```
 
+## Adding the middleware
+In the config/application controller add the middleware.
+
+``` ruby
+  config.middleware.use 'ConvertLocale'
+```
+
 ## Application Controller
 
 In the application controller we set a before_action filter
