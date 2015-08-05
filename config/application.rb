@@ -23,6 +23,6 @@ module Int
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
 
-     config.middleware.use 'ConvertLocale'
+    config.middleware.use 'ConvertLocale'
   end
 end
