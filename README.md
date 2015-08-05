@@ -60,4 +60,22 @@ is being sent.
   end
 ```
 
+## Internationalization
+
+To show that the environment is set when a param is not sent, you can change your browser language
+setting. Then just point to the root route for this app (home controller, index action)
+
+``` ruby
+# controller code does not need to deal with parameter swapping
+class HomeController < ApplicationController
+  def index
+  end
+end
+```
+
+``` erb
+index.html.erb file
+
+<%= t('hello_the_time_is') + ' ' + Time.now.to_s %>
+```
 
