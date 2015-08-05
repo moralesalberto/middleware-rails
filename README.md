@@ -9,7 +9,7 @@ Middlewares in rails are classes that are loaded automatically from the
 app/middleware directory. You define an initialize and call method
 similar to the one below.
 
-In this example we check if the front end send a params[:locale] and
+In this example we check if the front end sent a params[:locale] and
 adjust it to the first two characters. If the front end did not send it
 we set it from the http header 'HTTP_ACCEPT_LANGUAGE'.
 
@@ -39,7 +39,7 @@ end
 ```
 
 ## Adding the middleware
-In the config/application controller add the middleware.
+In the config/application.rb file add the middleware.
 
 ``` ruby
   config.middleware.use 'ConvertLocale'
